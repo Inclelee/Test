@@ -1,0 +1,9 @@
+2022-08-01 19:48:01,630 - main - Log.py[line:44] - INFO - ---log test---
+2022-08-01 20:03:07,312 - main - main.py[line:92] - INFO - Info : send email
+2022-08-01 20:03:07,312 - main - main.py[line:92] - INFO - Info : send email
+2022-08-01 20:03:09,292 - main - main.py[line:94] - INFO - Info : send email
+2022-08-01 20:03:09,292 - main - main.py[line:94] - INFO - Info : send email
+2022-08-01 20:04:03,404 - main - main.py[line:93] - INFO - Info : send email
+2022-08-01 20:04:03,404 - main - main.py[line:93] - INFO - Info : send email
+2022-08-01 20:05:14,165 - main - main.py[line:93] - INFO - Info : send email
+2022-08-01 20:05:14,165 - main - main.py[line:93] - INFO - Info : send email
