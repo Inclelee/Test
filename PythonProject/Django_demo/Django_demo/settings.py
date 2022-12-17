@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ndw#l&%6fo*i3)ou-2u3gx2uspmq(ik83mmuzv@lqje-t-5e&&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Debug模式 True:开启 | False:关闭
+# Debug调试模式 True:开启 | False:关闭
 DEBUG = True
 
 # 允许访问的ip（当DEBUG=False时，该项必须填写）
@@ -85,8 +85,14 @@ WSGI_APPLICATION = 'Django_demo.wsgi.application'
 # 数据库配置
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': BASE_DIR / 'db.mysql',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
+        'NAME': 'test_plat',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -135,3 +141,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 测试代码
+if __name__ == '__main__':
+    print(BASE_DIR)
