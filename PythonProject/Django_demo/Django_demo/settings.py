@@ -21,16 +21,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# 加密盐
 SECRET_KEY = 'django-insecure-ndw#l&%6fo*i3)ou-2u3gx2uspmq(ik83mmuzv@lqje-t-5e&&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Debug模式 True:开启 | False:关闭
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许访问的ip（当DEBUG=False时，该项必须填写）
+#                [] 仅允许本地访问
+#             ['*'] 允许所有人访问
+# ['192.168.8.204'] 仅允许指定ip访问
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-# 定义应用
+# 项目安装的应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# 中间件
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -50,8 +57,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# 当前项目的根 URL，是 Django 路由系统的入口
 ROOT_URLCONF = 'Django_demo.urls'
 
+# 模板管理
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,18 +82,18 @@ WSGI_APPLICATION = 'Django_demo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# 数据库配置
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': BASE_DIR / 'db.mysql',
     }
 }
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
-
+# 密码验证器
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -103,19 +112,23 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
-
+# 语言配置项 en-us:英文 | zh-Hans:中文
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# 时区配置项 UTC:世界时区 | Asia/Shanghai:中国时区
+TIME_ZONE = 'Asia/Shanghai'
 
+# 是否开启国际化功能/是否开启本地化功能
 USE_I18N = True
+USE_L10N = True
 
+# 时区的处理方式(True:存储到数据库的时间是世界时间 'UTC')
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+# 静态资源的存放位置，静态资源包括 CSS、JS、Images
 STATIC_URL = 'static/'
 
 # Default primary key field type
