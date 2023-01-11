@@ -110,7 +110,7 @@ if __name__ == '__main__':
     if test_flag == 1:
         print('test-配置等级')
 
-        level = 500
+        level = 501
         table_update = 'dlcenter_role_report.role_upgrade_42 AS ru,' \
                 'dlcenter_log.statis_role_183 AS sr,' \
                 'dlcenter_sdk.account_red_packet_bind_role AS arpbr '
@@ -119,6 +119,7 @@ if __name__ == '__main__':
                     'AND arpbr.role_id = ru.role_id ' \
                     'AND arpbr.role_id = sr.role_id ' \
                     'AND arpbr.app_id = 42 ' \
+                    'AND arpbr.game_id = 183 ' \
                     'AND arpbr.game_id = sr.game_id ' \
                     'AND arpbr.app_id = ru.app_id;'
         update_sql(table_update, data_key_value, condition_update)
