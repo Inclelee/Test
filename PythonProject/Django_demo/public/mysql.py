@@ -71,8 +71,8 @@ def execute_sql(sql):
 # 测试代码
 if __name__ == '__main__':
     table = ''
-    test_flag = 0
-    if test_flag == 1:      # 查询身份证所在表
+    test_flag = 0      # 查询身份证所在表
+    if test_flag == 1:
         sql_user_table = 'SELECT table_name ' \
                          'FROM information_schema.STATISTICS ' \
                          'WHERE table_schema = \'dlcenter_sdk\' ' \
@@ -94,8 +94,8 @@ if __name__ == '__main__':
                     print(res_search_user)
             # print('')
 
-    test_flag = 0
-    if test_flag == 1:      # 根据身份证查询平台账号id
+    test_flag = 0      # 根据身份证查询平台账号id
+    if test_flag == 1:
         table = 'plat_user_login_hh'
         fild = 'id'
         # condition = 'plat_user_name = \'13553349001\' ' \
@@ -106,7 +106,7 @@ if __name__ == '__main__':
                                 condition)
         print(res_select)
 
-    test_flag = 1
+    test_flag = 0       # 配置等级
     if test_flag == 1:
         print('test-配置等级')
 
@@ -123,3 +123,13 @@ if __name__ == '__main__':
                     'AND arpbr.game_id = sr.game_id ' \
                     'AND arpbr.app_id = ru.app_id;'
         update_sql(table_update, data_key_value, condition_update)
+
+    test_flag = 0       # 删除多余的默认角色（sad）
+    if test_flag == 1:
+        table = 'dlcenter_log.statis_role_183 '
+        condition = 'game_id = 183 ' \
+                    'and role_name = \'sad\' ' \
+                    'and role_id = \'hi113279\';'       # hi113279 hh114005
+        res = select_sql(table=table, condition=condition)
+        print(res)
+        # delete_sql(table, condition)

@@ -20,5 +20,5 @@ from . import test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('testdb/', test.testdb),
+    path('test_page/', test.test_search_data),
 ]
