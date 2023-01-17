@@ -8,8 +8,9 @@ from django.db import models
 # 类名 =》 数据表名
 # 字段 =》 数据表字段
 class Test(models.Model):
-    user = models.CharField(max_length=20)
-    password = models.IntegerField()
+    test_str = models.CharField(max_length=20)
+    # user = models.CharField(max_length=20)
+    # password = models.IntegerField()
 
 
 class RoleInfo(models.Model):
@@ -18,3 +19,5 @@ class RoleInfo(models.Model):
     role_name = models.CharField(max_length=64)
     role_id = models.CharField(max_length=64)
     role_level = models.IntegerField(default=0)
+    create_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField()
