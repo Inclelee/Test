@@ -8,7 +8,7 @@ from django.db import models
 # 类名 =》 数据表名
 # 字段 =》 数据表字段
 class Test(models.Model):
-    test_str = models.CharField(max_length=20)
+    test_str = models.CharField(max_length=64)
     # user = models.CharField(max_length=20)
     # password = models.IntegerField()
 

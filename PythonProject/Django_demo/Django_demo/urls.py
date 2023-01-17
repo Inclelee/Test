@@ -20,6 +20,6 @@ from . import test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test_page/', test.test_update_data),
+    path('test_page/', test.test_delete_data),
     path('upgrade/', test.test_search_data),
 ]
