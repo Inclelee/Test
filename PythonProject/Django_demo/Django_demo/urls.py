@@ -21,4 +21,5 @@ from . import test
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test_page/', test.test_search_data),
+    path('upgrade/', test.test_search_data),
 ]
