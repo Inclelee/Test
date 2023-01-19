@@ -1,4 +1,4 @@
-"""Django_demo URL Configuration
+"""test_demo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import test
+from test_mode import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test_page/', test.test_delete_data),
-    path('upgrade/', test.test_search_data),
+    path('upgrade/', views.fbv_test),
 ]
