@@ -22,6 +22,6 @@ from django.views import View
 
 def fbv_test(request):
     context = {}
-    context['hello'] = 'hello world'
+    context['title'] = '角色信息'
     # print(context['hello'])
     return render(request, 'upgrade.html', context)
