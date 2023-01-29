@@ -54,7 +54,7 @@ def make_insert_sql(data, table_name):
     return sql
 
 
-# # 测试代码
+# 测试代码
 if __name__ == '__main__':
     print('Data.py test')
 
