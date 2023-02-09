@@ -106,11 +106,11 @@ if __name__ == '__main__':
                                 condition)
         print(res_select)
 
-    test_flag = 0       # 配置等级
+    test_flag = 1       # 配置等级
     if test_flag == 1:
         print('test-配置等级')
 
-        level = 501
+        level = 1600
         table_update = 'dlcenter_role_report.role_upgrade_42 AS ru,' \
                 'dlcenter_log.statis_role_183 AS sr,' \
                 'dlcenter_sdk.account_red_packet_bind_role AS arpbr '

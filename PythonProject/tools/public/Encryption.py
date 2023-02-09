@@ -27,6 +27,20 @@ if __name__ == '__main__':
 
     game_id = '3'
     channel_id = '3051'
+    package_version = '20220923'
+    login_key = 'vDWpNTHYCwRS79TS'
+    # 210824.1.1
+    # 20220825 划分版本号
+
+    # 183 PRwalJXvvsXYWeJO
+    # 184 egIAA1gryawv0Ur6
+    # 225 pktRytdjDOenuSlG
+    # 363 aeuhKaDF42Bk8EVG
+    # 3   vDWpNTHYCwRS79TS
+    # 5   UDYLzRuxaUYzvKas
+    # 305 34ZM8ZYfSdEMJ0NH
+    # 75  Wh4bwpz2idFAnubR
+    # 2   tq6cQqr2HQrjQMNK
 
     params = 'app_name=wzry&app_version=0.0.0.1.220310&channel_id='+channel_id+'&co_id=1&device=869169028778036' \
              '&device_mac=00:DB:1F:E2:CE:64&device_type=M973Q&device_uuid=387bb0cb-bfa5-74f2-47d2-c141758f23f7' \
@@ -34,18 +48,10 @@ if __name__ == '__main__':
              '&log_imeifile_ctime=2023-01-29 04:36:06&log_mac=00:DB:1F:E2:CE:64&log_mac_ctime=2023-01-29 04:36:06' \
              '&log_mac_file=00:DB:1F:E2:CE:64&log_macfile_ctime=2023-01-29 04:36:06&mac=00:DB:1F:E2:CE:64' \
              '&network_type=wifi&orange_company_id=&package_name=com.zsqkand.game&package_type=android' \
-             '&package_version=20230110&reg_game_id='+game_id+'&reg_mac=00:DB:1F:E2:CE:64&sdk_version=2.0.2.9&svn_version=1' \
+             '&package_version='+package_version+'&reg_game_id='+game_id+'&reg_mac=00:DB:1F:E2:CE:64&sdk_version=2.0.2.9&svn_version=1' \
              '&system_type=android&system_version=9&uuid=387bb0cb-bfa5-74f2-47d2-c141758f23f7' \
              '&webview_ua=Mozilla/5.0 (Linux; Android 9; M973Q Build/PQ3B.190801.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36'
-    # 183 PRwalJXvvsXYWeJO
-    # 184 egIAA1gryawv0Ur6
-    # 225 pktRytdjDOenuSlG
-    # 363 aeuhKaDF42Bk8EVG
-    # 3   vDWpNTHYCwRS79TS
-    # 5   UDYLzRuxaUYzvKas
-    # 51  34ZM8ZYfSdEMJ0NH
 
-    login_key = 'vDWpNTHYCwRS79TS'
     str_md5 = params + login_key
     print('game_id:%s' % game_id)
     print('channel_id:%s' % channel_id)
