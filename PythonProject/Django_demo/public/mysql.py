@@ -1,11 +1,21 @@
 import pymysql
 
+
 # test
-host = '49.235.204.77'
-user = 'tester'
-password = 'Dr6getstqghsfDxcmQ'
-database = 'dlcenter_role_report'
-port = 4580
+# lexuan-test
+# host = '49.235.204.77'
+# user = 'tester'
+# password = 'Dr6getstqghsfDxcmQ'
+# database = 'dlcenter_role_report'
+# port = 4580
+# qianzhi-test
+host = '120.76.179.180'
+user = 'root'
+password = 'Qzjy123,.?'
+database = 'uat-qzyyds'
+port = 3306
+
+
 
 # dlcenter_sdk
 # dlcenter_role_report
@@ -106,7 +116,7 @@ if __name__ == '__main__':
                                 condition)
         print(res_select)
 
-    test_flag = 1       # 配置等级
+    test_flag = 0       # 配置等级
     if test_flag == 1:
         print('test-配置等级')
 
@@ -133,3 +143,10 @@ if __name__ == '__main__':
         res = select_sql(table=table, condition=condition)
         print(res)
         # delete_sql(table, condition)
+
+    test_flag = 1       # 查询系统用户
+    if test_flag == 1:
+        table = 'admin_users'
+        condition = 'id = 48;'
+        res = select_sql(table=table, condition=condition)
+        print(res)
